@@ -1,0 +1,399 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: gainsboro;
+}
+a{
+    text-decoration: none;
+    color: white;
+
+}
+span{
+    display: block;
+}
+.container{
+    width: 80%;
+    margin:0px auto;
+}
+.container1{
+    width:65%;
+    margin:0px auto;
+}
+.background{
+    background: url('./img/image1.png') no-repeat center/cover;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0px;
+    align-items: center;
+}
+.header-wrapper h1{
+    font-size: 30px;
+    font-weight: 700;
+}
+.header-wrapper nav{
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+.header-wrapper nav a{
+    color: white;
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 576px) {
+    .header-wrapper{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .header-wrapper nav{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .marketing-wrapper > div{
+        text-align: center;
+    }
+    .client-wrapper span{
+        text-align: center;
+    }
+
+}
+@media only screen and (max-width: 1040px) {
+
+    .banner-wrapper > div h1{
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .banner-wrapper > div h1 span{
+        font-size: 40px;
+    }
+    .banner-wrapper > div .btn{
+        font-size: 10px;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+.banner-wrapper{
+    padding: 70px 0px;
+}
+.banner-wrapper > div{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.banner-wrapper > div h1{
+    font-size: 80px;
+}
+.banner-wrapper > div p{
+    text-align: center;
+    line-height: 35px;
+}
+.banner-wrapper .btn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    border: 3px solid transparent;
+    padding: 15px 15px;
+    border-radius: 30px;
+    background-color: black;
+    font-size: 15px;
+    transition: all .30s;
+
+}
+.banner-wrapper .btn:hover{
+    cursor: pointer;
+    border-image: linear-gradient(to left, red,orange,rgb(51, 120, 144));
+    border-image-slice: 1;
+    border-radius: 0px;
+    padding: 16px 16px;
+}
+.background1{
+    background-color: white;
+}
+.client-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    color: gray;
+    font-weight: 600;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 0px 30px 0px;
+}
+.company{
+    color: grey;
+    font-weight:450;
+    font-size: 30px;
+    display: flex;
+    gap: 70px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.marketing-wrapper{
+    display: flex;
+    flex-direction: column;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0px;
+}
+.marketing-wrapper >div h1{
+    font-size: 33px;
+    padding: 20px 0px;
+}
+.marketing-wrapper >div span{
+    text-align: center;
+    line-height: 30px;
+}
+.marketing-section{
+    color: black;
+}
+.marketing-section > div{
+    display: flex;
+    gap: 70px;
+}
+.marketing-section > div > div h1{
+    font-size: 29px;
+    padding: 10px 0px;
+    color: blueviolet;
+}
+.marketing-section > div > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: space-between;
+    padding: 50px 0px;
+}
+.marketing-section > div > div a{
+    color: black;
+}
+.marketing-section > div > div {
+    flex: 1;
+    overflow: hidden;
+    
+}
+.marketing-section > div:nth-child(2){
+    object-fit: cover;
+    display: flex;
+    flex-direction: row-reverse;
+
+}
+
+
+@media only screen and (max-width: 1040px){
+    .marketing-section > div{
+        flex-direction: column;
+        text-align: center;
+    }
+    .marketing-section > div > div span{
+        display: inline;
+    }
+    .marketing-section > div:nth-child(2){
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+.search{
+    background-color: rgb(3, 5, 44);
+    /* padding: 50px 0px; */
+}
+.search-history{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 80px;
+    padding: 100px 0px;
+}
+.search > p{
+    padding: 20px 0px 0px 0px;
+    color: rgb(174, 174, 174);
+}
+.count{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.count > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.count  > div p{
+color: rgb(174, 174, 174);
+}
+
+@media only screen and (max-width: 576px) {
+    .count{
+        flex-direction: column;
+        gap:30px;
+    }
+}
+
+.feedback{
+    background-color: white;
+    color: black;
+}
+
+.feedback-wrapper > div:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 50px 0px;
+    flex-wrap: wrap;
+}
+.review{
+    display: flex;
+    padding: 50px 0px;
+    align-items: center;
+    justify-content: space-between;
+    overflow: visible;
+    gap:50px;
+}
+
+.review > div{
+    flex: 1;
+    overflow: visible;
+}
+.review > div:nth-child(1){
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.review > div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.review > div:nth-child(2) img{
+    width:110%;
+    margin-left: 35%;
+}
+@media only screen and (max-width: 576px) {
+    .review{
+        flex-direction: column;
+    }
+    .review > div:nth-child(1) span{
+        display: inline;
+}
+.review > div:nth-child(2) img{
+    width:70%;
+    margin: 0px auto;
+}
+}
+
+
+
+/* subscribe */
+
+
+.subscribe{
+    background: white;
+}
+.subscribe-wrapper{
+    background: url("./img/image1.png") no-repeat center/cover;
+    padding: 50px 0px;
+    border-radius: 20px ;
+    width:80%;
+    margin: 0px auto;
+}
+.subscribe-wrapper > div{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+}
+.subscribe-wrapper > div h1{
+    font-size: 40px;
+}
+.subscribe-wrapper > div p{
+    font-size: 15px;
+    line-height: 30px;
+}
+.subscribe-wrapper > div a{
+    background-color: black;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+@media only screen and (max-width: 576px) {
+    .subscribe-wrapper {
+        padding: 30px 20px;
+    }
+    .subscribe-wrapper > div h1{
+        font-size: 20px;
+    }
+    .subscribe-wrapper > div p{
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .subscribe-wrapper > div p span{
+        display: inline;
+    }
+    .subscribe-wrapper > div a{
+        font-size: 10px;
+        padding: 10px 15px;
+    }
+}
+@media only screen and (max-width: 845px) {
+    .subscribe-wrapper {
+        padding: 30px 20px;
+    }
+    .subscribe-wrapper > div h1{
+        font-size: 25px;
+    }
+    .subscribe-wrapper > div p{
+        font-size: 15px;
+        line-height: 25px;
+    }
+}
+
+
+/* subscribe */
+
+
+
+.footer{
+    background-color: white;
+    padding: 50px 0px;
+    color: black;
+    text-align: center;
+    font-size: 20px;
+}

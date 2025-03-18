@@ -1,0 +1,84 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+  }
+  .container{
+
+    width: 80%;
+    margin:0px auto;
+  }
+  header{
+    background-color: lightblue;
+  }
+
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+
+}
+.header-wrapper h4{
+    color: white;
+    font-size: 25px;
+}
+.container nav{
+    display: flex;
+    gap: 40px;
+}
+ .header-wrapper a{
+    text-decoration: none;
+    color: white;
+}
+.banner{
+  margin: 100px 0px;
+}
+.banner-wrapper{
+
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+
+}
+.banner-wrapper h1{
+    font-size: 45px;
+    font-weight: 600;
+    line-height:60px;
+
+}
+
+.banner-wrapper p{
+  margin: 20px 0px;
+  line-height: 30px;
+}
+.banner-wrapper a:nth-child(1){
+    text-decoration: none;
+    color:white;
+    font-size: large;
+}
+.banner-wrapper a:nth-child(2){
+    text-decoration: none;
+    color:black;
+    font-size: large;
+}
+.btn{
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+button{
+    background-color: orange;
+    padding: 15px 40px;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.7s;
+}
+button:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+}

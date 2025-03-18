@@ -1,0 +1,219 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+header{
+    background-color: blueviolet;
+}
+
+.container{
+width: 80%;
+margin: 0px auto;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+}
+.header-wrapper h1{
+    color: white;
+    font-size: 30px;
+}
+.header-wrapper nav{
+    display: flex;
+    gap: 30px;
+}
+.header-wrapper nav a{
+    font-size: 20px;
+    color: white;
+}
+.text-break{
+    display: block;
+}
+.banner{
+
+    padding: 100px 0px;
+}
+
+.banner-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner-wrapper > div{
+    width: 50%;
+}
+.banner-wrapper :nth-child(1) h1 :nth-child(3)::after{
+    content: " Career";
+    color:blueviolet ;
+}
+
+.banner-wrapper h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 65px;
+}
+.banner-wrapper p{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    line-height: 35px;
+    padding: 20px 0px;
+}
+
+.btn{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+.banner-wrapper button a{
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+.banner-wrapper .btn a{
+    color: black;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.banner-wrapper button{
+    padding: 15px 35px;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    transition: all .30s;
+}
+.banner-wrapper button:hover{
+    background-color: blueviolet;
+    cursor: pointer;
+    padding: 18px 36px;
+    font-size: 15px;
+
+}
+.the-jobs-wrapper{
+    display: flex;
+    gap: 20px;
+    align-items: space-between;
+    padding: 50px 0px 0px 0px ;
+
+}
+.the-jobs-wrapper > div >div{
+    width: 100%;
+
+}
+
+.the-jobs{
+    padding-bottom: 150px;
+}
+.the-jobs h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: xx-large;
+    
+}
+.the-jobs-wrapper > div{
+    padding: 0px 20px 20px 20px;
+    border-radius: 10px;
+    color: white;
+}
+.the-jobs-wrapper > div h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    padding: 50px 0px 10px 0px;
+}
+.the-jobs-wrapper > div p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    padding:10px 0px 20px 0px;
+    line-height: 30px;
+}
+.the-jobs-wrapper > div span{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 10px 0px;
+}
+.the-jobs-wrapper > div:nth-child(1){
+    background-color: rgb(1, 61, 93);
+}
+.the-jobs-wrapper > div:nth-child(2){
+    background-color: rgb(46, 1, 93);
+}
+.the-jobs-wrapper > div:nth-child(3){
+    background-color: rgb(84, 43, 2);
+}
+.the-jobs-wrapper > div > div{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+.the-jobs-wrapper > div > div a{
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    transition: all .30s;
+}
+.the-jobs-wrapper > div > div a:hover{
+    background-color: orange;
+    color: black;
+}
+.the-jobs-wrapper > div > div span{
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+}
+footer{
+    background-color: azure;
+    padding: 30px 0px;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight:500;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+
+    .header-wrapper{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .text-break{
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    .banner-wrapper{
+        flex-direction:column ;
+    }
+    .banner-wrapper > div{
+        width: 100%;
+    }
+    .banner-wrapper > div:nth-child(1){
+        text-align: center;
+    }
+    .btn{
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+    .the-jobs-wrapper{
+        flex-direction: column;
+    }
+}
