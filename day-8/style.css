@@ -3,9 +3,18 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.container{
+    width: 80%;
+    margin: 0px auto;
+}
+
 a{
     text-decoration: none;
     color: black;
+}
+
+.main,.sec1,.sec2,.sec3{
+    padding: 70px 0px;
 }
 
 .main-wrapper > div > div:nth-child(1) h1 {
@@ -22,6 +31,34 @@ a{
 .sec2{
     margin: 20px;
 }
+.sec3-wrapper > div > div > div{
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 14px 22px 52px -12px #7f7f7f29;
+
+}
+.sec3-wrapper > div > div > div img{
+    width:66px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media only screen and (min-width:1150px) {
 .sec2-wrapper > div{
     width: 20rem;
