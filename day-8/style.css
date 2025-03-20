@@ -1,46 +1,86 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-.container{
+
+.container {
     width: 80%;
     margin: 0px auto;
 }
 
-a{
+a {
     text-decoration: none;
     color: black;
 }
 
-.main,.sec1,.sec2,.sec3{
+.main,
+.sec1,
+.sec2,
+.sec3,
+.sec4 {
     padding: 70px 0px;
 }
 
-.main-wrapper > div > div:nth-child(1) h1 {
+.main-wrapper>div>div:nth-child(1) h1 {
     font-size: 50px;
     font-weight: 700;
     margin-top: 70px;
 }
 
-.sec1-wrapper > div:nth-child(2) img{
-    background-size: cover; 
+.sec1-wrapper>div:nth-child(2) img {
+    background-size: cover;
     background-position: center;
     width: 100%;
 }
-.sec2{
+
+.sec2 {
     margin: 20px;
 }
-.sec3-wrapper > div > div > div{
+
+.sec3-wrapper>div>div>div {
     padding: 20px 20px;
     border-radius: 10px;
     box-shadow: 14px 22px 52px -12px #7f7f7f29;
 
 }
-.sec3-wrapper > div > div > div img{
-    width:66px;
+
+.sec3-wrapper>div>div>div img {
+    width: 66px;
 }
 
+.sec4-wrapper>div>div>div {
+    padding: 70px 0px;
+    border-radius: 10px;
+    box-shadow: 14px 22px 52px -12px #7f7f7f29;
+    margin-bottom: 30px;
+
+}
+
+.sec4-wrapper>div>div img {
+    margin-top: 50px;
+    width: 150px;
+}
+.download-sec{
+    background-color: rgb(233, 241, 253);
+}
+.download-wrapper>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.download-wrapper .store>div {
+    display: flex;
+    background-color: azure;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+    max-width:48%;
+}
 
 
 
@@ -60,19 +100,21 @@ a{
 
 
 @media only screen and (min-width:1150px) {
-.sec2-wrapper > div{
-    width: 20rem;
+    .sec2-wrapper>div {
+        width: 20rem;
+    }
 }
-}
+
 @media only screen and (max-width:1150px) {
-    .sec2-wrapper{
-        gap:20px;
+    .sec2-wrapper {
+        gap: 20px;
 
     }
-.sec2-wrapper > div{
-    width: 100%;
-    
-}
+
+    .sec2-wrapper>div {
+        width: 100%;
+
+    }
 }
 
 
@@ -90,22 +132,24 @@ a{
 
 
 @media only screen and (max-width: 576px) {
-.main-wrapper > div > div:nth-child(1) h1 {
-font-size: 20px;
-font-weight: 700;
+    .main-wrapper>div>div:nth-child(1) h1 {
+        font-size: 20px;
+        font-weight: 700;
+    }
 }
-}
+
 @media only screen and (max-width: 768px) {
-    .main-wrapper > div > div:nth-child(1) h1 {
+    .main-wrapper>div>div:nth-child(1) h1 {
         font-size: 35px;
         font-weight: 700;
     }
-    
+
 
 }
+
 @media only screen and (max-width: 992px) {
-    
-    .main-wrapper > div > div:nth-child(1) h1 {
+
+    .main-wrapper>div>div:nth-child(1) h1 {
         font-size: 30px;
         font-weight: 700;
     }
