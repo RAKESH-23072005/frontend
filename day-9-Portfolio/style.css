@@ -1,0 +1,46 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+.org-color{
+    color: #E6813E;
+}
+.line{
+    width: 80px;
+    height: 8px;
+    background-color: #E6813E;
+}
+.container{
+    width: 90%;
+}
+
+.banner-wrapper > div > div:nth-child(3) p span{
+    color: #7C808B;
+    font-size: 14px;
+}
+.reach{
+    background-color: #E6813E;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    transition: all .30s;
+}
+.reach:hover{
+    background-color: #6b6b6b;
+    padding: 10px 20px;
+}
+.download{
+    padding: 10px 20px;
+    border: none;
+    font-size: 15px;
+}

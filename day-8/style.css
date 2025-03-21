@@ -49,17 +49,29 @@ a {
     width: 66px;
 }
 
-.sec4-wrapper>div>div>div {
+.sec4-wrapper>div>div {
     padding: 70px 0px;
     border-radius: 10px;
     box-shadow: 14px 22px 52px -12px #7f7f7f29;
     margin-bottom: 30px;
+    transition: all 0.30;
 
 }
-
 .sec4-wrapper>div>div img {
-    margin-top: 50px;
+    margin: 50px 0px;
+    width: 130px;
+    transition: all 0.30;
+}
+.sec4-wrapper>div>div img:hover{
+    cursor: pointer;
+    margin-top: 10px;
     width: 150px;
+}
+.sec4-wrapper>div>div:hover{
+    cursor: pointer;
+    margin-bottom: 30px;
+    box-shadow: 14px 22px 52px -12px #85565629;
+    border-radius: 10px;
 }
 .download-sec{
     background-color: rgb(233, 241, 253);
