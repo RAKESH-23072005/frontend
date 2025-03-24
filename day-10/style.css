@@ -216,7 +216,7 @@ margin-right: 200px;
     /* background: url(./img/footer/bg.png); */
     background-color: #23155B;
     color: white;
-    border-top-left-radius: 100px;
+    border-top-left-radius: 200px;
     padding: 100px 0px;
 }
 .footer-wrapper > div:nth-child(1) h2{
