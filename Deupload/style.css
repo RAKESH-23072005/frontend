@@ -1,0 +1,150 @@
+:root{
+    --primary-color: #651FFF;
+    --secondary-color: #5C5F6E;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "poppins", sans-serif;
+}
+h1,h2,h3,h4,h5,h6{
+    margin: 0px;
+}
+a{
+    text-decoration: none;
+}
+p{
+    color: var(--secondary-color);
+}
+.banner,.app,.lightning,.lightweight,.privacy,.pricing,.work,.ready{
+    padding: 100px 0px;
+}
+.color{
+    color: var(--primary-color);
+}
+.my-btn-primary{
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.my-btn-primary-outline{
+    background-color: transparent;
+    color: black;
+    border: 3px solid black;
+    padding: 12px 40px;
+    border-radius: 12px;
+    font-size: 16px;    
+    font-weight: bold;
+}
+
+/* banner */
+.banner{
+    background-color: #EBE5FA;
+}
+/* banner */
+/* lightning */
+.lightning-wrapper>div:nth-child(2)>div>div{
+    background-color: var(--primary-color);
+    padding: 50px 50px;
+    border-radius: 24px;
+    color: white;
+}
+.lightning-wrapper>div:nth-child(2)>div>div p{
+    color: white;
+}
+.lightning-wrapper>div:nth-child(2)>div>div a{
+    color: white;
+}
+/* lightning */
+/* lightweight */
+.lightweight-wrapper>div>div:nth-child(1)>div{
+    background-color:#FFF7ED;
+    border-radius: 24px;
+    padding: 10px 10px;
+}
+.lightweight-wrapper>div>div:nth-child(2)>div{
+    background-color:#E0F7FA;
+    border-radius: 24px;
+    padding: 10px 10px;
+}
+/* lightweight */
+/* team */
+.team {
+    padding: 60px 0px;
+}
+.team > .container{
+    background-color: #ECECFE;  
+    border-radius: 24px;
+    padding: 40px 60px;
+}
+/* team */
+/* privacy */
+.privacy-wrapper>div>div>div:nth-child(2)>div:nth-child(1)>a{
+    color:#00E5FF;
+}
+.privacy-wrapper>div>div>div:nth-child(2)>div:nth-child(2)>a{
+    color:#34D399;
+}
+.privacy-wrapper>div>div:nth-child(2)>div>div{
+    border-radius: 24px;
+}
+/* privacy */
+/* pricing */
+.pricing{
+    background: linear-gradient(to top,white 0%,white 40%,#00E5FF 40%,#00E5FF 100%);
+}
+.pricing-wrapper>div>div:nth-child(1){
+    border-radius: 24px;
+    background-color: white;
+    padding: 40px;
+}
+
+.pricing-wrapper>div>div:nth-child(2){
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    background-color: var(--primary-color);
+    padding: 40px;
+    color: white;
+}
+@media only screen and (max-width: 992px){
+    .pricing-wrapper>div>div:nth-child(2){
+        border-radius: 24px;
+    }
+}
+.pricing-wrapper>div>div:nth-child(2) p{
+    color: white;
+}
+.my-btn-primary-price{
+    background-color: white;
+    color: var(--primary-color);
+    padding: 2px 15px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+.my-btn-primary-price-1{
+    background-color: white;
+    color:#00E5FF;
+    padding: 2px 15px;
+    font-size: 12px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+/* pricing */
+/* ready */
+.ready-wrapper>div:nth-child(2)>div:nth-child(1){
+    background-color:var(--primary-color);
+        border-radius: 20px;  
+}
+.ready-wrapper>div:nth-child(2)>div:nth-child(2){
+    background-color:#ECECFE;
+    border-radius: 20px;    
+}
+/* ready */
