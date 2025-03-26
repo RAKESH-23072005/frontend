@@ -148,3 +148,26 @@ p{
     border-radius: 20px;    
 }
 /* ready */
+/* footer */
+.footer{
+    background-color: #1A284E;
+    color: white;
+}
+.footer-wrapper>div>div>div p,a{
+    color: white;
+}
+.footer-wrapper>div>div>div>p span{
+    color: white;
+    font-size: 16px;
+    font-weight: 200;
+}
+.footer-wrapper>div>div h4{
+    font-size: 16px;
+    font-weight: bolder;
+}
+.footer-wrapper>div>div:nth-child(2)>div>div>div>div span{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
+/* footer */
