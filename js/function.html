@@ -1,18 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>function</title>
-    <!-- <script src="object.js"></script>
-    <script src="templete.js"></script>
-    <script src="array.js"></script>
-    <script src="if-else.js"></script>
-    <script src="switch.js"></script> -->
-    <script src="function.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    li{
+      list-style:none;
+    }
+  </style>
 </head>
 <body>
-    <h1 id="name">Rakesh sharma R</h1>
-    <button id="btn" onclick="document.getElementById('name').style.color='red'" >click me!</button>
+<!-- <div>
+  <label for="n1">enter number 1</label>
+  <input type="number" id="n1" required >
+  <label for="n2">enter number 2</label>  
+  <input type="number" id="n2"  required>
+  <button onclick="add1()">add the numbers</button>
+  <p style="display: none;" id="result">the final values : <span id="final"></span></p>
+  <script src="./dom-1.js"></script> 
+</div>
+ -->
+
+
+<div>
+  <h1 class="btn1">Hi i am your task Reminder</h1>
+ <label for="c1"> enter the task</label>
+ <input type="text" id="text1" required>
+ <button onclick="display()">send</button>
+</div>
+
+
+<div class="container1">
+  <h1>your tasks</h1>
+  <ul class="list">
+    <li class="item">
+      <h1 id="taask-name"></h1>
+      <i id="delete"></i>
+    </li>
+  </ul>
+  <div class="btns">
+    <button id="delete-all" onclick="remove()">delete all</button>
+</div>
+</div>
+<!-- <script src="./dom-1.js"></script> -->
+<script src="./create.js"></script>
 </body>
 </html>
