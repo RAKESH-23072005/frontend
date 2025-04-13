@@ -1,0 +1,24 @@
+.tasklist-display{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+#task-list1{
+    border: 2px solid #100f0f;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #7bd0bf;
+}
+#task-list{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #f8f5f2;  
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f3bc85;   
+    margin: 20px;   
+}
