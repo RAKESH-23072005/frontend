@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>task</title>
   <style>
-    li{
-      list-style:none;
+    .changecolor{
+      background-color: rgba(214, 247, 70, 0.5);
+      color: rgb(199, 148, 47);
     }
   </style>
 </head>
@@ -23,7 +24,7 @@
  -->
 
 
-<div>
+<!-- <div>
   <h1 class="btn1">Hi i am your task Reminder</h1>
  <label for="c1"> enter the task</label>
  <input type="text" id="text1" required>
@@ -43,7 +44,26 @@
     <button id="delete-all" onclick="remove()">delete all</button>
 </div>
 </div>
-<!-- <script src="./dom-1.js"></script> -->
-<script src="./create.js"></script>
+ <script src="./dom-1.js"></script> -->
+<!-- <script src="./create.js"></script> -->
+
+
+<div class="container">
+  <h1 class="heading">Task List</h1>
+  <input type="text" id="taskInput" placeholder="Enter a task" required>
+  <button id="addTaskButton">Add Task</button>
+  <p class="numberTask">number task added:<span class="count"></span></p>
+</div>
+
+<div class="task-list">
+  <h2>Tasks</h2>
+  <ul id="taskList">
+    <!-- Task items will be added here dynamically -->
+  </ul>
+  <button id="deleteAllButton">Clear Tasks</button>
+</div>
+
+ <!-- <script src="./event-listener.js"></script> -->
+  <script src="./mouse-event.js"></script>
 </body>
 </html>
