@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentDetails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dataEntry.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header d-flex justify-content-between align-items-center  gap-4">
+            <h1>Student Details</h1>
+            <nav class="d-flex justify-content-center align-item-center gap-4">
+                <li><a href="">login</a></li>
+                <li><a href="">Form</a></li>
+                <li><a href="">logout</a></li>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <div class="StudentDetails-wrapper">
+            <div class="StudentDetails">
+                <h2>Student Details</h2>
+                <div>
+                    <div>
+                        <label for="name">Name:
+                            <input type="text" id="name" placeholder="Enter your Name" required value="raj">
+                        </label>
+                    </div>
+            <div>
+                <label for="age">Age:
+                    <input type="number" id="age" placeholder="Enter your Age" required value="20">
+                </label>
+            </div>
+            <div>
+                <label for="id">Student ID:
+                    <input type="number" id="id" placeholder="Enter your Student ID" required value="123456">
+                </label>
+            </div>
+            <div>
+                <label for="email">Email-ID:
+                    <input type="email" id="email" placeholder="Enter your Email-ID" required regex="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" value="student@gmail.com" >
+                </label>
+            </div>
+            <div>
+                <label for="phone">Phone Number:
+                    <input type="text" id="phone" placeholder="Enter your Phone Number" required value="357347358" >
+                </label>
+            </div>
+        </div>
+        <div class="button">
+            <div class="btn btn-primary" onclick="saveInfo()">save</div>
+            <div class="btn btn-secondary" onclick="cancelbtn()">Cancel</div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="outputinfo-wrapper">
+        <h2>Enrolled Sutdent Details</h2>
+        <div>
+            <div class="outputinfo">
+
+            </div>
+        </div>
+    </div>
+</div>
+<Script src="./dataEntry.js"></Script>
+</body>
+</html>

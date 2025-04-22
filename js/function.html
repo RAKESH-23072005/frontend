@@ -3,67 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>task</title>
-  <style>
-    .changecolor{
-      background-color: rgba(214, 247, 70, 0.5);
-      color: rgb(199, 148, 47);
-    }
-  </style>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+  crossorigin="anonymous">
+  <title>Task List</title>
 </head>
 <body>
-<!-- <div>
-  <label for="n1">enter number 1</label>
-  <input type="number" id="n1" required >
-  <label for="n2">enter number 2</label>  
-  <input type="number" id="n2"  required>
-  <button onclick="add1()">add the numbers</button>
-  <p style="display: none;" id="result">the final values : <span id="final"></span></p>
-  <script src="./dom-1.js"></script> 
-</div>
- -->
+
+    
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <div id="main" class="card">
+          <div class="card-content">
+            <span class="card-title">Task List</span>
+            <div class="row">
+              <form id="task-form">
+                <div class="input-field col s12">
+                  <input type="text" name="task" id="task">
+                  <label for="task">New Task</label>
+                </div>
+                <input type="submit" value="Add Task" class="btn purple">
+                
+                <!-- <button type="submit" class="btn purple">Add Task</button> -->
+               </form>
+               
+            </div>
+            
+          </div>
+          <div class="card-action">
+            <h5 class="test" id="task-title">
+              Tasks
+            </h5>
 
 
-<!-- <div>
-  <h1 class="btn1">Hi i am your task Reminder</h1>
- <label for="c1"> enter the task</label>
- <input type="text" id="text1" required>
- <button onclick="display()">send</button>
-</div>
+            <!-- IndexOf -->
+            <div>
+              <input type="text" name="task" id="search" placeholder="Search a list">
+            </div> 
+
+            <ul class="collection">
 
 
-<div class="container1">
-  <h1>your tasks</h1>
-  <ul class="list">
-    <li class="item">
-      <h1 id="taask-name"></h1>
-      <i id="delete"></i>
-    </li>
-  </ul>
-  <div class="btns">
-    <button id="delete-all" onclick="remove()">delete all</button>
-</div>
-</div>
- <script src="./dom-1.js"></script> -->
-<!-- <script src="./create.js"></script> -->
+              <!-- <li class="collection-item">
+                List Item 1
+                <a href="#" class="delete-item secondary-content test"  title="im Link">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              
+              <li class="collection-item">
+                List Item 2
+                <a href="#" class="delete-item secondary-content" title="im Link">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>
+              <li class="collection-item">
+                List Item 3
+                <a href="#" class="delete-item secondary-content" title="im Link">
+                  <i class="fa fa-remove"></i>
+                </a>
+              </li>  -->
+              
+              
+             </ul>
+            <a class="clear-tasks btn black" id="btn-test" href="#">Clear Tasks</a>
+          </div>
+        </div>
+      </div>
 
+    </div>
 
-<div class="container">
-  <h1 class="heading">Task List</h1>
-  <input type="text" id="taskInput" placeholder="Enter a task" required>
-  <button id="addTaskButton">Add Task</button>
-  <p class="numberTask">number task added:<span class="count"></span></p>
-</div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-<div class="task-list">
-  <h2>Tasks</h2>
-  <ul id="taskList">
-    <!-- Task items will be added here dynamically -->
-  </ul>
-  <button id="deleteAllButton">Clear Tasks</button>
-</div>
+  <script src="./app.js"></script>
 
- <!-- <script src="./event-listener.js"></script> -->
-  <script src="./mouse-event.js"></script>
 </body>
 </html>
