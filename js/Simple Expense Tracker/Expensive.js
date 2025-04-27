@@ -1,3 +1,4 @@
+
 let expensiveName = document.querySelector(".expensiveName");
 let Amount = document.querySelector(".Amount");
 let saveBtn = document.querySelector(".saveButton");
@@ -32,6 +33,7 @@ function savebtn(e){
         ul.appendChild(li);
         
         totalExpensive(Amount.value);
+        storeLocalStorage(expensiveName.value,Amount.value);
         
     }
 }
@@ -58,8 +60,21 @@ ul.addEventListener("click",(event)=>{
         // console.log(Total);
         li1.remove();
         }
-    
-
-
-
 })
+
+
+// local storage
+
+function storeLocalStorage(name,amt){
+    let localStr;
+    if(localStorage.getItem("localStr")== null){
+        localStr=[];
+        localStr.push(name,amt);
+        localStorage.setItem("localStr",JSON.stringify(localStr));
+    }
+    else{
+        localStr=JSON.parse(localStorage.getItem("localStr"));
+        localStr.push(name,amt);
+        localStorage.setItem("localStr",JSON.stringify(localStr));
+    }
+}
