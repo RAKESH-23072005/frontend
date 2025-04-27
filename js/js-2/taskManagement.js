@@ -19,7 +19,7 @@ function loadEventListeners(){
 
 function addTask(e){
     e.preventDefault();
-    if(Task.value===""){
+    if(Task.value ===""){
         alert("enter the task");
     }
     else{
@@ -32,7 +32,22 @@ function addTask(e){
         li.innerText=Task.value;
         li.appendChild(a);
         Item.appendChild(li);
+        storeLocalStorage(Task.value);
         Task.value="";
+    }
+}
+function storeLocalStorage(taskvalue){
+    let taskvalues
+    if(localStorage.getItem("taskvalues") == null){
+        taskvalues = [];
+        taskvalues.push(taskvalue);
+        localStorage.setItem("taskvalues",JSON.stringify(taskvalues));
+    }
+    else{
+        console.log("Step 2");
+        taskvalues = JSON.parse(localStorage.getItem("taskvalues"));
+        taskvalues.push(taskvalue);
+        localStorage.setItem("taskvalues",JSON.stringify(taskvalues));
     }
 }
 function clrTask(){
@@ -43,12 +58,12 @@ function clrTask(){
     
 }
 Item.addEventListener("click",(event)=>{
-    if(event.target.tagName==='I'){
-        console.log(delIcon.parentElement);
-        
-
-        event.target.style.backgroundColor = "red";
-    }
-})
+        if (event.target.classList.contains('fa')) {
+            event.target.closest('li').remove();
+          }
+          if (event.target.classList.contains('collection-item')){
+            event.target.style.backgroundColor="red";
+          }
+    })
 // console.log(taskForm,addTask,addItem);
 
