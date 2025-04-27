@@ -1,4 +1,5 @@
 
+
 let expensiveName = document.querySelector(".expensiveName");
 let Amount = document.querySelector(".Amount");
 let saveBtn = document.querySelector(".saveButton");
@@ -9,6 +10,32 @@ let Expensivecal = document.querySelector(".Expensivecal");
 loadEventListeners();
 function loadEventListeners(){
     saveBtn.addEventListener("click",savebtn);
+    document.addEventListener("DOMContentLoaded",getExpensive);
+}
+
+function getExpensive(){
+    let localStr;
+    localStr=[];
+    if(localStorage.getItem("localStr")===null){
+        console.log("empty");
+    }
+    else{
+        localStr=JSON.parse(localStorage.getItem("localStr"));
+         localStr.forEach(function(element){
+            let li =document.createElement("li");
+            li.className="list-group-item d-flex";
+            let a = document.createElement("a");
+            a.className="ms-auto";
+            li.innerText = `Expensive Name:${element.expensiveName} Expensive Amount:${element.Amount}`;
+            a.innerHTML=` <i class="delete-item ">X</i>`;
+            // expensiveName.value="";
+            // Amount.value="";
+            li.appendChild(a);
+            ul.appendChild(li);
+            
+            totalExpensive(element.Amount);
+        })
+    }
 }
 
 let Total = 0; //declare as gobal variable the value anywhere inside the fnction also
@@ -53,28 +80,50 @@ function totalExpensive(TotalExpensive){
 ul.addEventListener("click",(event)=>{
     if(event.target.classList.contains('delete-item')){
         let li1=event.target.closest('li');
+        let text= li1.innerText;
+        let name = text.split("Expensive Name:")[1].split(" Expensive Amount:")[0].trim();
         let amount = parseInt(li1.innerText.split("Expensive Amount:")[1]);
         // console.log(amount);
         Total-=amount;
         expensivecal.innerText=`Total Expensive: ${Total}`;
         // console.log(Total);
         li1.remove();
+        reomvelocalStorage(name,amount);
         }
 })
+function reomvelocalStorage(name,amount){
+    let localStr = JSON.parse(localStorage.getItem("localStr"));
+    localStr = localStr.filter(function(expense){
+        return !(expense.expensiveName === name && expense.Amount == amount);
+    });
+    console.log(localStr);
+    localStorage.setItem("localStr",JSON.stringify(localStr));
+    console.log("happen")
+}
+
+
 
 
 // local storage
 
 function storeLocalStorage(name,amt){
     let localStr;
-    if(localStorage.getItem("localStr")== null){
+    if(localStorage.getItem("localStr")=== null){
         localStr=[];
-        localStr.push(name,amt);
+        let expense = {
+            expensiveName: name,
+            Amount: amt
+        };
+        localStr.push(expense);
         localStorage.setItem("localStr",JSON.stringify(localStr));
     }
     else{
         localStr=JSON.parse(localStorage.getItem("localStr"));
-        localStr.push(name,amt);
+        let expense = {
+            expensiveName: name,
+            Amount: amt
+        };
+        localStr.push(expense);
         localStorage.setItem("localStr",JSON.stringify(localStr));
     }
 }
