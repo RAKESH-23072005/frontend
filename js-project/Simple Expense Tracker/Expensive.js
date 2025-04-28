@@ -6,18 +6,19 @@ let saveBtn = document.querySelector(".saveButton");
 let ul = document.querySelector(".list-group");
 let expensiveList = document.querySelector(".expensiveList");
 let Expensivecal = document.querySelector(".Expensivecal");
+let clearAll = document.querySelector('.clearAll');
 
 loadEventListeners();
 function loadEventListeners(){
     saveBtn.addEventListener("click",savebtn);
     document.addEventListener("DOMContentLoaded",getExpensive);
+    clearAll.addEventListener("click",clearAllbtn);
 }
 
 function getExpensive(){
     let localStr;
     localStr=[];
     if(localStorage.getItem("localStr")===null){
-        console.log("empty");
     }
     else{
         localStr=JSON.parse(localStorage.getItem("localStr"));
@@ -92,13 +93,21 @@ ul.addEventListener("click",(event)=>{
         }
 })
 function reomvelocalStorage(name,amount){
+
     let localStr = JSON.parse(localStorage.getItem("localStr"));
-    localStr = localStr.filter(function(expense){
+    if(confirm("Are you Sure ?")){    
+        localStr = localStr.filter(function(expense){
         return !(expense.expensiveName === name && expense.Amount == amount);
     });
-    console.log(localStr);
-    localStorage.setItem("localStr",JSON.stringify(localStr));
-    console.log("happen")
+}
+    localStorage.setItem("localStr",JSON.stringify(localStr));   
+}
+
+function clearAllbtn(name,amount){
+    if(confirm("Are you sure to delete all the Expensive List")){
+        localStorage.clear();  //clear all the stored data from the local storage
+    }   
+    // localStorage.removeItem("localStr");  using key name
 }
 
 
