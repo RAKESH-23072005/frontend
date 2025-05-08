@@ -2,12 +2,13 @@ let taskInput = document.querySelector(".taskInput");
 let taskAddBtn = document.querySelector(".taskAddBtn");
 let taskContainer = document.querySelector(".taskContainer");
 let taskName  = document.querySelector("#taskName");
+let searchBox = document.querySelector("#search");
 eventLoader();
 function eventLoader(){
     taskAddBtn.addEventListener("click",saveFunction);
     taskContainer.addEventListener("click",deleteTask);
     document.addEventListener("DOMContentLoaded",getTaskFromLocalStorage);
-    
+    searchBox.addEventListener("input",searchTask);
 }
 
 
@@ -116,7 +117,7 @@ function getTaskFromLocalStorage(){
         let comlpeteBtn = document.createElement("button");
         comlpeteBtn.className = "completebtn btn btn-success ms-5";
         comlpeteBtn.innerText = "Complete";
-        li.className = "taskList list-group-item d-flex";
+        li.className = "taskList list-group-item ";
         a.className="delBtn link-danger ms-auto";
         a.innerHTML = `<i class="fa fa-remove"></i>`;
         li.innerText= item;
@@ -127,5 +128,25 @@ function getTaskFromLocalStorage(){
         comlpeteButton(comlpeteBtn);
         })
     }
-    console.log(localVar);
+}
+
+
+function searchTask(){
+let searchBoxValue = searchBox.value.toLowerCase();
+let taskList = document.querySelectorAll(".taskContainer li");
+// console.log(taskList);
+// console.log(searchBoxValue);
+taskList.forEach(function(item){
+    let taskValue = item.textContent;
+    let Value;
+    if(taskValue.includes("Complete")){
+        Value = taskValue.split("Complete")[0].trim().toLowerCase();
+        // console.log(taskValue);
+    }
+    else{
+        Value = taskValue.split("completed")[0].trim().toLowerCase();
+        // console.log(taskValue);
+    }
+    item.style.display = Value.includes(searchBoxValue) ? "flex" : "none";
+})
 }
