@@ -33,7 +33,7 @@ function saveButton(e){
         let li = document.createElement('li');
         let a = document.createElement('a');
         a.className="ms-auto";
-        a.innerHTML=`<i class="delete-item ">X</i>`;
+        a.innerHTML=`<i class="delete-item">X</i>`;
         li.className="list-group-item d-flex";
         li.innerText=`habit Name :${habitName}`;
         li.appendChild(a);

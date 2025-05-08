@@ -1,0 +1,16 @@
+.search-box {
+    border-bottom: 2px solid #0a0b0b;
+  }
+
+  .search-box input{
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+.completedTask{
+  text-decoration: line-through;
+    color: #a0a0a0;
+}
